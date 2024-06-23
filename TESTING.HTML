@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    title>Document</title>
+</head>
+<body> 
+  <section id="projects">
+    <div class="services-sec-div">
+        <h2>My Projects</h2>
+        <p>"Offering expertise in both web and software development, I create innovative solutions that drive business success, combining creativity, technical skills, and a passion for delivering high-quality results."</p>
+    </div>
+
+    <div class="image-grid">
+        <!-- First line -->
+        <div class="image-row">
+            <div class="image-square">
+                <img src="Images/project-1.jpg" alt="Image 1">
+                <div class="hover-content">
+                    <h2>Heading 1</h2>
+                    <p>Paragraph 1</p>
+                </div>
+            </div>
+            <div class="image-rect">
+                <img src="Images/project-2.jpg" alt="Image 2">
+                <div class="hover-content">
+                    <h2>Heading 2</h2>
+                    <p>Paragraph 2</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Second line -->
+        <div class="image-row">
+            <div class="image-rect">
+                <img src="Images/project-3.jpg" alt="Image 3">
+                <div class="hover-content">
+                    <h2>Heading 3</h2>
+                    <p>Paragraph 3</p>
+                </div>
+            </div>
+            <div class="image-square">
+                <img src="Images/project-4.jpg" alt="Image 4">
+                <div class="hover-content">
+                    <h2>Heading 4</h2>
+                    <p>Paragraph 4</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Third line -->
+        <div class="image-row">
+            <div class="image-square">
+                <img src="Images/project-5.jpg" alt="Image 5">
+                <div class="hover-content">
+                    <h2>Heading 5</h2>
+                    <p>Paragraph 5</p>
+                </div>
+            </div>
+            <div class="image-rect">
+                <img src="Images/project-6.jpg" alt="Image 6">
+                <div class="hover-content">
+                    <h2>Heading 6</h2>
+                    <p>Paragraph 6</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+</body>
+<style>
+#projects {
+    background-color: var(--bg-color);
+    min-height: 100vh;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.image-grid {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px; /* Adjust as needed */
+    margin: 0 auto;
+}
+
+.image-row {
+    flex-basis: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* Adjust spacing between images */
+    margin-bottom: 20px; /* Adjust margin between rows */
+}
+
+.image-square,
+.image-rect {
+    position: relative;
+    flex-basis: calc(50% - 10px); /* Adjust width of items */
+}
+
+.image-square img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.image-rect img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.hover-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.3s;
+    display: grid;
+    place-items: center;
+}
+
+.image-square:hover .hover-content,
+.image-rect:hover .hover-content {
+    opacity: 0.9;
+    background-color: var(--main-color); /* Change to your desired hover background color */
+}
+
+.hover-content h2,
+.hover-content p {
+    color: #fff;
+    text-align: center;
+    margin: 0;
+}
+
+.hover-content h2 {
+    margin-bottom: 10px;
+}
+
+.hover-content p {
+    grid-row: 2;
+}
+  </style>
+
+</html>
