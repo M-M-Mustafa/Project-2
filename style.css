@@ -25,6 +25,8 @@ html , body{
 }
 section{
   min-height: 100vh;
+
+
   /* padding: 12rem 10% 2rem; */
 }
 .navbar {
@@ -66,7 +68,8 @@ section{
   transition: border-bottom 0.3s ease; /* Smooth transition for underline */
 }
 
-.nav-links a:hover {
+.nav-links a:hover,
+.nav-links a.active {
   border-bottom: 2px solid #FFBD39;
 }
 
@@ -201,6 +204,8 @@ h2 span,
   align-items: center;
   justify-content: center;
   padding: 50px; /* Adjust padding as needed */
+  border-bottom :100px solid black;
+  margin-bottom : 0px;
 }
 
 .about-section .left-side {
@@ -320,6 +325,7 @@ h2 span,
 
 .about-info-rgt li {
   margin-bottom: 15px; 
+  
 }
 
 /* resume section  */
@@ -327,6 +333,8 @@ h2 span,
   background: var(--bg-color);
   height: 160vh;
   width: auto;
+
+  margin-top:0px ;
 }
 .resume-section {
   
@@ -416,60 +424,74 @@ h2 span,
 }
 
 /* services secton */
-#services{
+#services {
   background: var(--bg-color);
-  height: 160vh;
+  height: 50vh;
   width: auto;
+  border: 1px solid black;
 }
+
 .services-section {
-  
+  margin-top: 40px;
   margin-left: 20px;
   margin-right: 20px;
   color: white;
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Center content vertically */
-  align-items: center; /* Center content horizontally */
-  
-
+  justify-content: center;
+  align-items: center;
 }
+
+.services-section .services-icons {
+  font-size: 40px;
+  margin-left: 150px;
+  margin-top: -30px;
+  margin-bottom: 30px;
+  color: var(--main-color);
+  transition: color 0.3s ease;
+}
+
+
 .services-sec-div {
-
-  position: relative; /* Required for positioning h3 correctly */
-   align-items: center;
-  text-align: center; /* Center text horizontally */
-  padding: 20px; /* Add padding to ensure content doesn't overflow */
-  overflow: hidden; /* Ensure content doesn't overflow the div */
+  position: relative;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  overflow: hidden;
 }
+
 .services-sec-div h2 {
-  font-size: 4rem; /* Adjust font size as needed */
+  font-size: 4rem;
   font-weight: bold;
   font-family: Poppins;
-  color: white; /* Main heading color */
-  position: relative; /* Required for stacking */
-  z-index: 2; /* Above the background heading */
+  color: white;
+  position: relative;
+  z-index: 2;
   overflow: hidden;
   margin: auto;
 }
 
 .services-sec-div h3 {
-  font-size: 6rem; 
-  opacity: 0.1; 
+  font-size: 6rem;
+  opacity: 0.1;
   font-weight: 1300;
-  color: white; 
-  position: absolute; 
-  z-index: 1; 
+  color: white;
+  position: absolute;
+  z-index: 1;
   top: 10px;
   left: 50%;
   transform: translateX(-50%);
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); 
-  margin: 0; 
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  margin: 0;
 }
+
 .services-sec-div p {
+  margin-left: 80px;
   margin-bottom: 20px;
   width: 800px;
   text-align: center;
 }
+
 .services-section .row {
   display: flex;
   flex-direction: row;
@@ -485,67 +507,120 @@ h2 span,
   margin: 0 10px 20px;
   border-radius: 3px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out; /* Add transition for smooth hover effect */
   background-color: var(--secondary-color);
 }
 
+/* Hover effect */
+.services-section .box:hover {
+  background-color: var(--main-color);
+  opacity: calc(1.2); /* Darken background color on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Add box-shadow on hover */
+}
+.services-section .box:hover .services-icons {
+  color: var(--secondary-color); 
+}
+.services-section .box:hover h4{
+  color: var(--secondary-color); 
+}
 
-.services-section .row:nth-child(2) .box:nth-child(3) {
-  margin-bottom: 40px;
+.services-section .box h4 {
+  font-size: 1.5rem; /* Adjusted font size for service titles */
+  margin-top: 1rem; /* Add margin top for separation */
+  color: var(--main-color);
+}
+
+.services-section .box p {
+  font-size: 1rem; /* Adjusted font size for service descriptions */
+  color: white;
+}
+
+.services-section .box hr {
+  border-color: var(--main-color);
+  margin-top: 1rem; /* Adjusted margin top for separation */
+}
+
+@media (max-width: 768px) {
+  /* Adjust styles for smaller screens if necessary */
 }
 
 
 /* skills section  */
+
+#skills {
+  background: var(--bg-color);
+
+  padding: 40px 0; /* Added padding to the section */
+}
+
 .skills-section {
-  max-width: 800px; /* adjust the width as needed */
-  margin: 40px auto;
+  max-width: 1200px; /* Adjust the width as needed */
+  margin: 0 auto;
   background-color: var(--bg-color);
-}
-.skills-section  span { 
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   color: white;
-  max-width: 800px; /* adjust the width as needed */
-  margin: 40px auto;
+  text-align: center; /* Center text in the skills section */
 }
 
-.row {
+.services-sec-div h2, .services-sec-div h3 {
+  margin: 10px 0;
+}
+
+.progress-container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  align-items: center;
+  border: none;
+}
+
+.progress-row {
+  display: flex;
   justify-content: space-between;
-  margin-bottom: 20px;
-}
-
-.skill-bar {
-  width: 45%; /* adjust the width as needed */
-  margin-bottom: 20px;
-}
-
-.skill-bar span {
-  font-size: 16px;
-  font-weight: bold;
-  margin-bottom: 10px;
-  background-color: var(--secondary-color);
-}
-
-.bar {
-  height: 20px;
-  background-color: var(--main-color);
-  border-radius: 10px;
-  padding: 10px;
-  box-sizing: border-box;
-}
-
-.bar::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
-  height: 100%;
-  background-color: #fff;
-  border-radius: 10px;
+  gap: 20px;
+  margin-bottom: 20px;
+  flex-wrap: wrap; /* Ensure rows wrap on smaller screens */
 }
 
+.progress-column {
+  flex-basis: calc(50% - 20px); /* Adjusted to 50% width */
+  margin-bottom: 20px;
+}
 
+.progress-label {
+  text-align: center;
+  margin-bottom: 10px;
+  color: white;
+  font-size: 18px;
+}
+
+.progress-bar {
+  height: 20px;
+  background-color: grey;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+.progress {
+  height: 100%;
+  background-color: orange;
+  width: 0;
+  transition: width 0.5s ease-in-out;
+  border-radius: 10px;
+  text-align: right;
+  padding-right: 5px;
+  box-sizing: border-box; /* Ensure padding does not affect the width */
+  color: white; /* Make the text color white */
+}
+
+@media (max-width: 768px) {
+  .progress-column {
+      flex-basis: 100%;
+  }
+}
 
 /* Project Section */
 #projects{
@@ -561,16 +636,24 @@ h2 span,
 .image-grid {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  /* border: pink solid 2px ; */
+  align-items: center;
+  max-width: 1200px;
+  
+  
 }
 
 .image-row {
   flex-basis: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content:center;
   gap: 0;
-  margin: 0;
-  border :1px solid red;
-  padding: 30px;
+  /* padding: -000px; */
+  margin-left: 300px;
+  margin-right: 300px;
+  margin-top: -10px;
+  /* border: 2px solid red; */
 }
 
 .image-square {
@@ -592,7 +675,8 @@ h2 span,
   height: 300px;
   object-fit: cover;
   margin: 0 auto;
-  border :1px solid green;
+
+
 }
 .image-rect img {
   width: 800px;
@@ -612,7 +696,7 @@ h2 span,
   display: grid;
   place-items: center;
   grid-template-rows: auto 1fr;
-  border :1px solid teal;
+
 }
 
 .image-square:hover .hover-content {
@@ -651,6 +735,8 @@ h2 span,
   max-height: 800px; /* adjust the width as needed */
   margin: 10px auto;
   cursor: pointer;
+
+  align-items: center;
 }
 
 .blog-post {
@@ -665,7 +751,10 @@ h2 span,
   margin-bottom: 10px;
 
 }
+.blog-section .services-sec-div p{
 
+  margin-left: 170px;
+}
 .post-info p {
   margin-bottom: 0;
   font-size: 12px;
