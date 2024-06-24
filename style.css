@@ -337,9 +337,9 @@ h2 span,
   margin-top:0px ;
 }
 .resume-section {
-  
-  margin-left: 20px;
-  margin-right: 20px;
+ 
+  margin-left: 70px;
+  margin-right: 70px;
   color: white;
   display: flex;
   flex-direction: column;
@@ -348,6 +348,7 @@ h2 span,
 
 }
 .resume-sec-div {
+  
   position: relative; /* Required for positioning h3 correctly */
   align-items: center;
   text-align: center; /* Center text horizontally */
@@ -382,6 +383,7 @@ h2 span,
   margin-bottom: 20px;
   width: 800px;
   text-align: center;
+  
 }
 .resume-section h2 {
   color: white;
@@ -396,6 +398,7 @@ h2 span,
   flex-wrap: wrap;
   justify-content: space-between;
   margin-bottom: 20px; /* Add space between rows */
+
 }
 
 .resume-section .box {
@@ -403,10 +406,11 @@ h2 span,
   padding: 80px; /* Adjust padding as needed */
   margin-bottom: 20px; /* Space between boxes */
   font-size: larger;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   background-color: var(--secondary-color);
+
 }
 
 .resume-btn button{
