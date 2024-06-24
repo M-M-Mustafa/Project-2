@@ -105,7 +105,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function downloadCV() {
         // Replace with the path to your CV PDF file
-        var pdfUrl = '';
+        var pdfUrl = 'Assets/Mustafa-Resume.pdf';
         
         // Create an <a> element
         var a = document.createElement('a');
